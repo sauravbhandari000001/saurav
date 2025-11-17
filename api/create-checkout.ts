@@ -1,5 +1,4 @@
 // frontend/api/create-checkout.ts
-import type { VercelRequest, VercelResponse } from '@vercel/node';
 import axios from 'axios';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -72,3 +71,4 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   }
 }
+
