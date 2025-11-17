@@ -1,0 +1,143 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 280 20% 95%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 280 20% 95%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 280 20% 95%;
+
+    --primary: 280 100% 65%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 260 50% 25%;
+    --secondary-foreground: 280 20% 95%;
+
+    --muted: 240 8% 12%;
+    --muted-foreground: 280 10% 70%;
+
+    --accent: 280 100% 65%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 280 20% 95%;
+
+    --border: 260 30% 18%;
+    --input: 240 8% 12%;
+    --ring: 280 100% 65%;
+
+    --radius: 0.75rem;
+
+    /* Futuristic Purple Theme Colors */
+    --gaming-primary: 280 100% 65%;
+    --gaming-secondary: 300 100% 70%;
+    --gaming-accent: 260 100% 60%;
+    --gaming-dark: 240 10% 4%;
+    --gaming-card: 240 8% 8%;
+    --gaming-border: 260 30% 18%;
+    
+    /* Futuristic Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(280 100% 65%), hsl(300 100% 70%));
+    --gradient-secondary: linear-gradient(145deg, hsl(260 100% 60%), hsl(280 100% 65%));
+    --gradient-background: linear-gradient(135deg, hsl(240 10% 4%) 0%, hsl(260 15% 8%) 25%, hsl(280 20% 6%) 50%, hsl(300 15% 8%) 75%, hsl(240 10% 4%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(240 8% 8%), hsl(260 12% 10%));
+    
+    /* Futuristic Shadows and Glows */
+    --shadow-glow: 0 0 40px hsl(280 100% 65% / 0.4);
+    --shadow-glow-strong: 0 0 60px hsl(280 100% 65% / 0.6);
+    --shadow-card: 0 8px 30px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 240 8% 8%;
+    --sidebar-foreground: 280 20% 95%;
+    --sidebar-primary: 280 100% 65%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 260 50% 25%;
+    --sidebar-accent-foreground: 280 20% 95%;
+    --sidebar-border: 260 30% 18%;
+    --sidebar-ring: 280 100% 65%;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 280 20% 95%;
+
+    --card: 240 8% 8%;
+    --card-foreground: 280 20% 95%;
+
+    --popover: 240 8% 8%;
+    --popover-foreground: 280 20% 95%;
+
+    --primary: 280 100% 65%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 260 50% 25%;
+    --secondary-foreground: 280 20% 95%;
+
+    --muted: 240 8% 12%;
+    --muted-foreground: 280 10% 70%;
+
+    --accent: 280 100% 65%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 280 20% 95%;
+
+    --border: 260 30% 18%;
+    --input: 240 8% 12%;
+    --ring: 280 100% 65%;
+    
+    --sidebar-background: 240 8% 8%;
+    --sidebar-foreground: 280 20% 95%;
+    --sidebar-primary: 280 100% 65%;
+    --sidebar-primary-foreground: 240 10% 4%;
+    --sidebar-accent: 260 50% 25%;
+    --sidebar-accent-foreground: 280 20% 95%;
+    --sidebar-border: 260 30% 18%;
+    --sidebar-ring: 280 100% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    min-height: 100vh;
+  }
+
+  /* Futuristic glow effects */
+  .glow-purple {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-purple-strong {
+    box-shadow: var(--shadow-glow-strong);
+  }
+
+  /* Animated gradient backgrounds */
+  .gradient-animated {
+    background: linear-gradient(135deg, hsl(280 100% 65%), hsl(300 100% 70%), hsl(260 100% 60%));
+    background-size: 300% 300%;
+    animation: gradientShift 6s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
