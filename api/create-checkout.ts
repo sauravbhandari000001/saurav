@@ -48,6 +48,8 @@ export default async function handler(req: any, res: any) {
       headers: { Authorization: SELLHUB_API_KEY, 'Content-Type': 'application/json' }
     });
 
+    console.log("SellHub response:", data);
+
     if (data.checkout_url || data.url) {
       return res.json({ checkout_url: data.checkout_url || data.url });
     }
@@ -71,5 +73,6 @@ export default async function handler(req: any, res: any) {
     });
   }
 }
+
 
 
